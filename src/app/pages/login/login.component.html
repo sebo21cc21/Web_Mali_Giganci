@@ -1,0 +1,38 @@
+<div class="login-container">
+    <div [formGroup]="loginForm" class="login-content">
+
+        <p class="title">Logowanie</p>
+        <p class="title-intro">Witaj ponownie!</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Login</mat-label>
+            <input formControlName="username" matInput type="text">
+            <mat-error *ngIf="loginForm.controls['username'].hasError('required')">
+                Nazwa użytkownika wymagana
+            </mat-error>
+            <mat-error *ngIf="loginForm.controls['username'].hasError('email')">
+                Nieprawidłowy email
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Hasło</mat-label>
+            <input formControlName="password" matInput type="password" placeholder="Hasło">
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">
+                Hasło wymagane
+            </mat-error>
+        </mat-form-field>
+
+        <p class="forgot-label">Zapomniałeś hasła?</p>
+        <p class="alternative">Nie masz konta? <span [routerLink]="['/register']">Zarejestruj się</span></p>
+        <button (click)="loginWithEmailAndPassword()" [disabled]="loginForm.invalid" class="btn btnFill">Zaloguj się</button>   
+        <div class="line-divider">
+            <p>Lub</p>
+        </div>
+        <div (click)="loginWithGoogle()" class="google-card">
+            <app-google-login-card></app-google-login-card>
+        </div>
+        <div (click)="loginWithFacebook()" class="facebook-card">
+            <app-facebook-login-card></app-facebook-login-card>
+        </div>
+    </div>
+</div>

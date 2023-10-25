@@ -1,0 +1,37 @@
+<div class="register-container">
+    <div [formGroup]="registerForm" class="register-content">
+
+        <p class="title">Rejestracja</p>
+        <p class="title-intro">Witaj, miło Cię poznać!</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Login</mat-label>
+            <input formControlName="username" matInput type="text">
+            <mat-error *ngIf="registerForm.controls['username'].hasError('required')">
+                Nazwa użytkownika wymagana
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls['username'].hasError('email')">
+                Nieprawidłowy email
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Hasło</mat-label>
+            <input formControlName="password" matInput type="password" placeholder="Hasło">
+            <mat-error *ngIf="registerForm.controls['password'].hasError('required')">
+                Hasło wymagane
+            </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Powtórz hasło</mat-label>
+            <input formControlName="newpassword" matInput type="password" placeholder="Powtórzone hasło">
+            <mat-error *ngIf="registerForm.controls['newpassword'].hasError('required')">
+                Hasło wymagane
+            </mat-error>
+        </mat-form-field>
+        <button (click)="registerWithEmailAndPassword()" [disabled]="registerForm.invalid || registerForm.get('password')?.value != registerForm.get('newpassword')?.value" class="btn btnFill">Zarejestruj się</button>   
+        <p class="alternative">Masz już konto? <span [routerLink]="['/login']">Zaloguj się</span></p>
+
+
+    </div>
+</div>

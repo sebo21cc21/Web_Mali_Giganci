@@ -1,0 +1,82 @@
+@import '/src/themes/theme.scss';
+
+.register-container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+
+    .register-content{
+        width:60%;
+        display: flex;
+        flex-direction: column;
+    }
+    .title{
+        font-size: $font-size36;
+        text-align: center;
+        margin-bottom: $padding20;
+    }
+    .title-intro{
+        font-size: $font-size24;
+        text-align: center;
+    }
+    .forgot-label{
+        font-size: $font-size16;
+        color: $primary-color;
+        text-align: center;
+    }
+    .alternative{
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 500;
+        span{
+            color:$primary-color;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+    .line-divider{
+        border: $thin-border;
+        position: relative;
+        margin-top: $padding20;
+        p{
+            position: absolute;
+            background:white;
+            width: 50px;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            left: 50%;
+        }
+    }
+    .google-card{
+        margin-top: $padding20;
+    }
+
+    .btn {
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        border-radius: $border-radius5;
+        transition:  transform 0.1s; 
+        cursor: pointer;
+        &:active {
+            transform: scale(0.99); 
+        }
+
+    }
+
+    .btnFill {
+        background: $primary-color;
+        color: $white-color;
+    }
+    button:disabled{
+        background: rgba(0, 0, 0, 0.4); 
+        cursor: not-allowed;
+    }
+}
