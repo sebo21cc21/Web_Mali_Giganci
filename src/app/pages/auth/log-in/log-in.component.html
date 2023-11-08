@@ -1,0 +1,46 @@
+<div class="form">
+  <div class="form__container">
+    <h1>Zaloguj się</h1>
+    <form [formGroup]="form" (ngSubmit)="logIn()">
+      <div>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+          <mat-error *ngIf="isEmailValid as messsage">Uzupełnij pole</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field>
+          <mat-label>Wprowadź hasło</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            formControlName="password"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+          <mat-error>Uzupełnij pole</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <button mat-flat-button color="accent" type="submit">Zaloguj się</button>
+      </div>
+    </form>
+    <hr />
+    <span class="small-text providers">Posiadasz Google lub Facebook?</span>
+    <app-button-providers [isLogin]="true" />
+    <span class="small-text log-in-redirect"
+      >Nie masz jeszcze konta?
+      <a routerLink="/auth/sign-up">Zarejestruj się</a></span
+    >
+  </div>
+</div>
