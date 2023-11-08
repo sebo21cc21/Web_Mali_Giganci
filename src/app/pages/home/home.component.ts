@@ -8,14 +8,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [MatToolbarModule, MatButtonModule],
   selector: 'app-home',
-  template: `
-    <mat-toolbar color="secondary">
-      <span>MaliGiganci</span>
-
-      <button mat-flat-button (click)="logOut()">Wyloguj się</button>
-    </mat-toolbar>
-    
-  `,
+  templateUrl: './home.component.html',
   styles: [
     `
       mat-toolbar {
