@@ -1,13 +1,18 @@
-import { Component, inject } from '@angular/core';
+import { Component, Injectable, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AuthService } from '../../core/services/auth.service';
 import { Router } from '@angular/router';
-// import { FirebaseService } from '../../core/services/firebase.service';
+import { FirebaseService } from '../../core/services/firebase.service';
+import { CommonModule } from '@angular/common';
+
+@Injectable({
+  providedIn: 'root'
+})
 
 @Component({
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule],
+  imports: [MatToolbarModule, MatButtonModule, CommonModule],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -21,7 +26,8 @@ import { Router } from '@angular/router';
   ],
 })
 export default class HomeComponent {
-  // constructor(private firebaseService: FirebaseService) {}
+  flagValue: boolean | null = null;
+  constructor(private firebaseService: FirebaseService) {}
   private _router = inject(Router);
 
   private authservice = inject(AuthService);
@@ -34,11 +40,21 @@ export default class HomeComponent {
       console.log(error);
     }
   }
-  // toggleFlag(childName: string): void {
-  //   this.firebaseService.updateFlag(true, childName).then(() => {
-  //     console.log(`${childName} flag updated`);
-  //   }).catch(error => {
-  //     console.error('Error updating flag: ', error);
-  //   });
-  // }
+  toggleFlag(): void {
+    this.firebaseService.updateFlag(true).then(() => {
+      console.log(`lag updated`);
+      this.firebaseService.getFlagValue().subscribe((value: boolean | null) => {
+        this.flagValue = value;
+      });
+    }).catch(error => {
+      console.error('Error updating flag: ', error);
+    });
+  }
+
+  getFlag(): void{
+    this.firebaseService.getFlagValue().subscribe((value: boolean | null) => {
+      this.flagValue = value;
+    });
+  }
+  
 }

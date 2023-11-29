@@ -1,8 +1,10 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { authGuard, publicGuard } from './core/guards';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-export const routes: Routes = [
+const routes: Routes = [
   {
     path: '',
     canActivate: [authGuard],
@@ -23,3 +25,14 @@ export const routes: Routes = [
     ],
   },
 ];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule {
+}
