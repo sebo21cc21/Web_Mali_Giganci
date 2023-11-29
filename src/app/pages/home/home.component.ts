@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   imports: [MatToolbarModule, MatButtonModule],
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
   styles: [
     `
       mat-toolbar {
