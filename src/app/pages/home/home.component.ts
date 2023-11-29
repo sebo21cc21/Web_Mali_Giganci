@@ -41,13 +41,17 @@ export default class HomeComponent {
     }
   }
   toggleFlag(): void {
-    this.firebaseService.updateFlag(true).then(() => {
-      console.log(`lag updated`);
-      this.firebaseService.getFlagValue().subscribe((value: boolean | null) => {
-        this.flagValue = value;
-      });
-    }).catch(error => {
-      console.error('Error updating flag: ', error);
+    this.firebaseService.getFlagValue().subscribe((currentValue: boolean | null) => {
+
+      if (currentValue !== null) {
+        const newValue = !currentValue;
+        this.firebaseService.updateFlag(newValue).then(() => {
+          console.log(`Flag updated`);
+          this.flagValue = newValue;
+        }).catch(error => {
+          console.error('Error updating flag: ', error);
+        });
+      }
     });
   }
 

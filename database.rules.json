@@ -1,10 +1,6 @@
 {
   "rules": {
-    "blockBaby": {
-      "flag": {
-        ".read": true,
-        ".write": "auth != null"
-      }
-    }
+    ".read": true,
+    ".write": true
   }
 }

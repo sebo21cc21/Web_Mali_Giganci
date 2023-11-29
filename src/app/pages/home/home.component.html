@@ -5,7 +5,7 @@
   </mat-toolbar>
   <div class="image-holder"> 
     <img src="../assets/img/kid.png" alt="Opis obrazka">
-    <button mat-flat-button class="btn" (click)="getFlag()">Zablokuj możliwość grania Janka</button>
+    <button mat-flat-button class="btn" (click)="toggleFlag()">Zablokuj możliwość grania Janka</button>
     <span *ngIf="flagValue">Janek jest zablokowany {{flagValue}}</span>
   </div>
   <div class="image-holder"> 

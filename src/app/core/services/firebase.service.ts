@@ -6,6 +6,7 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root',
 })
+
 export class FirebaseService {
   constructor(private db: AngularFireDatabase) {}
   getFlagValue(): Observable<boolean | null> {
