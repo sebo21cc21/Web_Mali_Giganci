@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "zpodb-13865": {
+      "hosting": {
+        "auth-yt": [
+          "zpodb-13865"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "zpodb-13865"
+  }
+}
