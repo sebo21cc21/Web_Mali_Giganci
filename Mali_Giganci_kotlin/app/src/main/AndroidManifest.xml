@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.MaliGiganci"
+            tools:targetApi="31">
+        <activity
+                android:name=".Register"
+                android:exported="false" />
+        <activity
+                android:name=".Login"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".ResultActivity"
+                android:exported="false" />
+        <activity
+        android:name=".ResultActivityEnglish"
+        android:exported="false" />
+        <activity
+            android:name=".QuizQuestionsActivityEnglish"
+            android:exported="false" />
+        <activity
+            android:name=".QuizActivityEnglish"
+            android:exported="false" />
+        <activity
+            android:name=".ResultActivityMath"
+            android:exported="false" />
+        <activity
+            android:name=".QuizQuestionsActivityMath"
+            android:exported="false" />
+        <activity
+            android:name=".QuizActivityMath"
+            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ResultActivity"-->
+<!--            android:exported="false" />-->
+        <activity
+                android:name=".QuizQuestionsActivity"
+                android:exported="false" />
+        <activity
+                android:name=".QuizActivity"
+                android:exported="false" />
+        <activity
+                android:name=".Constants"
+                android:exported="false" />
+        <activity
+                android:name=".MemoryEasyGame"
+                android:exported="false" />
+        <activity
+                android:name=".MemoryChooseMode"
+                android:exported="false" />
+        <activity
+                android:name="StartActivity"
+                android:exported="false" />
+
+        <activity android:name=".MakePlayer" />
+
+        <activity
+                android:name=".QuestionModel"
+                android:exported="false" />
+        <activity
+                android:name=".QuizMainActivity"
+                android:exported="false" />
+        <activity
+                android:name=".ChooseModeMemory"
+                android:exported="false" />
+        <activity
+                android:name=".MemoryHardGame"
+                android:exported="false" />
+        <activity
+                android:name=".GameTicTacToeHard"
+                android:exported="false" />
+        <activity
+                android:name=".GameTicTacToeMedium"
+                android:exported="false" />
+        <activity
+                android:name=".GameTicTacToeEasy"
+                android:exported="false" />
+        <activity
+                android:name=".ChooseMode"
+                android:exported="false" />
+        <activity
+                android:name=".GameTicTacToeTwoPlayers"
+                android:exported="false"
+                android:label="@string/title_activity_game_tic_tac_toe"
+                android:theme="@style/Theme.MaliGiganci.NoActionBar" />
+        <activity
+                android:name=".ChoosePlayer"
+                android:exported="false" />
+        <activity
+                android:name=".Draw"
+                android:exported="false" />
+        <activity
+                android:name=".YouLose"
+                android:exported="false"
+                android:label="@string/title_activity_you_lose"
+                android:theme="@style/Theme.MaliGiganci.NoActionBar" />
+        <activity
+                android:name=".PlayerWins"
+                android:exported="false" />
+        <activity
+                android:name=".Quiz"
+                android:exported="false" />
+        <activity
+                android:name=".TicTacToe"
+                android:exported="false"
+                android:label="@string/title_activity_tic_tac_toe"
+                android:theme="@style/Theme.MaliGiganci.NoActionBar" />
+        <activity
+                android:name=".Memory"
+                android:exported="false" />
+        <activity
+                android:name=".MainActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.facebook.FacebookActivity"
+                android:configChanges=
+                        "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                android:label="@string/app_name" />
+        <activity
+                android:name="com.facebook.CustomTabActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

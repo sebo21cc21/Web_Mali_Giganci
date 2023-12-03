@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "361827856884",
+    "firebase_url": "https://zpodb-13865-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "zpodb-13865",
+    "storage_bucket": "zpodb-13865.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361827856884:android:9d9610b8988009a96d09a1",
+        "android_client_info": {
+          "package_name": "com.example.maligiganci"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361827856884-vpseeij0q5t5lhbkbqpvm37l8e8209sv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maligiganci",
+            "certificate_hash": "2f63d6d6c1c47f25be854fdb1aad57bee387cb05"
+          }
+        },
+        {
+          "client_id": "361827856884-vpseeij0q5t5lhbkbqpvm37l8e8209sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWU_do9q0osLGJCJSMpHxfhQDVCb_qK4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361827856884-duf6pbkm31bqdclfhbcsrh962p84rup3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
