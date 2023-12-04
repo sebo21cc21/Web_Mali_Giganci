@@ -5,6 +5,7 @@ import { AuthService } from '../../core/services/auth.service';
 import { Router } from '@angular/router';
 import { FirebaseService } from '../../core/services/firebase.service';
 import { CommonModule } from '@angular/common';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, CommonModule],
+  imports: [MatToolbarModule, MatButtonModule, CommonModule, MatSnackBarModule],
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
@@ -26,7 +27,9 @@ import { CommonModule } from '@angular/common';
   ],
 })
 export default class HomeComponent {
-  flagValue: boolean | null = null;
+  private _snackBar = inject(MatSnackBar);
+  private router = inject(Router);
+  flagValue: boolean | null = true;
   flagToggled: boolean = false; // Dodaj zmienną flagToggled
 
   constructor(private firebaseService: FirebaseService) {}
@@ -43,24 +46,50 @@ export default class HomeComponent {
     }
   }
 
-  toggleFlag(): void {
-    if (!this.flagToggled) {
-      this.firebaseService.getFlagValue().subscribe((currentValue: boolean | null) => { 
-        const newValue = !currentValue;
-        this.firebaseService.updateFlag(newValue).then(() => {
-          console.log(`Flag updated`);
-          this.flagValue = newValue;
-          this.flagToggled = true;
-        }).catch(error => {
-          console.error('Error updating flag: ', error);
-        });
+  block(): void {
+    this.firebaseService.updateFlag(false).then(() => {
+      console.log(`Użytkownik został zablokowany`);
+      this.flagValue = false;
+      const snackBarRef = this.openSnackBarBlock();
+      snackBarRef.afterDismissed().subscribe(() => {
+        this.router.navigateByUrl('/');
       });
-    }
+    }).catch(error => {
+      console.error('Error updating flag: ', error);
+    });
   }
-
+  
+  unblock(): void {
+    this.firebaseService.updateFlag(true).then(() => {
+      console.log(`Użytkownik został odblokowany`);
+      this.flagValue = true;
+      const snackBarRef = this.openSnackBarUnblock();
+      snackBarRef.afterDismissed().subscribe(() => {
+        this.router.navigateByUrl('/');
+      });
+    }).catch(error => {
+      console.error('Error updating flag: ', error);
+    });
+  }
+  
   getFlag(): void {
     this.firebaseService.getFlagValue().subscribe((value: boolean | null) => {
       this.flagValue = value;
+    });
+  }
+  openSnackBarBlock() {
+    return this._snackBar.open('Użytkownik zablokowany poprawnie 😀', 'Zamknij', {
+      duration: 2500,
+      verticalPosition: 'top',
+      horizontalPosition: 'end',
+    });
+  }
+
+  openSnackBarUnblock() {
+    return this._snackBar.open('Użytkownik odblokowany poprawnie 😀', 'Zamknij', {
+      duration: 2500,
+      verticalPosition: 'top',
+      horizontalPosition: 'end',
     });
   }
 }

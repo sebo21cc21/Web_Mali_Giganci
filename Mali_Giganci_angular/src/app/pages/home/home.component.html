@@ -5,8 +5,9 @@
   </mat-toolbar>
   <div class="image-holder"> 
     <img src="../assets/img/kid.png" alt="Opis obrazka">
-    <button mat-flat-button class="btn" (click)="toggleFlag()">Zablokuj możliwość grania Janka</button>
-    <span *ngIf="flagValue">Janek jest zablokowany {{flagValue}}</span>
+    <div *ngIf="!flagValue" class="blocked-message">Janek jest zablokowany</div>
+    <button *ngIf="flagValue" mat-flat-button class="btn" (click)="block()">Zablokuj możliwość grania Janka</button>
+    <button *ngIf="!flagValue" mat-flat-button class="btn" (click)="unblock()">Odblokuj możliwość grania Janka</button>
   </div>
   <div class="image-holder"> 
     <img src="../assets/img/kid2.png" alt="Opis obrazka">
