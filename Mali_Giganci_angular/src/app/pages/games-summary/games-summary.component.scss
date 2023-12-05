@@ -1,0 +1,16 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    padding: 0 10px; 
+  
+    .spacer {
+      flex: 1; 
+      text-align: center; 
+    }
+  
+    button {
+      margin-left: 10px; 
+    }
+  }
+  

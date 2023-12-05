@@ -3,12 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { authGuard, publicGuard } from './core/guards';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GamesSummaryComponent } from './pages/games-summary/games-summary.component';
+
 
 const routes: Routes = [
   {
     path: '',
     canActivate: [authGuard],
     loadComponent: () => import('./pages/home/home.component'),
+  },
+  {
+    path: 'games-summary',
+    component: GamesSummaryComponent,
+    canActivate: [authGuard] 
   },
   {
     path: 'auth',

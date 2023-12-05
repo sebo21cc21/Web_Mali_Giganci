@@ -19,11 +19,14 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CommonModule } from '@angular/common';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { GamesSummaryComponent } from './pages/games-summary/games-summary.component';
 const NO_NG_MODULES = importProvidersFrom([BrowserAnimationsModule]);
 @NgModule({
   declarations: [
     AppComponent,
+    GamesSummaryComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -39,7 +42,10 @@ const NO_NG_MODULES = importProvidersFrom([BrowserAnimationsModule]);
     provideStorage(() => getStorage()),
     CommonModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+
 
   ],
   providers: [
