@@ -7,12 +7,14 @@ import android.os.Handler
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.database.FirebaseDatabase
 
 
 class MemoryHardGame : AppCompatActivity() {
     private var point = 0
+    private var numberOfGame = 0
     private var numOn = 1
-    private var buttonCount = 0  // Dodana zmienna do zliczania ilości naciśniętych przycisków
+    private var buttonCount = 0
     private lateinit var c1: TextView
     private lateinit var c2: TextView
     private lateinit var card1: TextView
@@ -89,6 +91,8 @@ class MemoryHardGame : AppCompatActivity() {
                 c2.text = ""
                 point++
                 pointsTextView.text = "Punkty: $point"
+                val databaseReference = FirebaseDatabase.getInstance().getReference("blockBaby/Memory/Hard")
+                databaseReference.child("point").setValue(point)
             } else {
                 Handler().postDelayed({
                     c1.setBackgroundResource(R.drawable.x)
@@ -155,6 +159,9 @@ class MemoryHardGame : AppCompatActivity() {
     fun resetGame() {
         point = 0
         buttonCount =0
+        numberOfGame += 1
+        val databaseReference = FirebaseDatabase.getInstance().getReference("blockBaby/Memory/Hard")
+        databaseReference.child("numberOfGames").setValue(numberOfGame)
         val pointsTextView = findViewById<TextView>(R.id.points)
         pointsTextView.text = "Punkty: $point"
         val cards = arrayOf(

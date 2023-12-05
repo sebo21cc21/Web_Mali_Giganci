@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AlertDialog
 import com.example.maligiganci.databinding.ActivityGameTicTacToeBinding
+import com.google.firebase.database.FirebaseDatabase
 
 class GameTicTacToeMedium : AppCompatActivity() {
 
@@ -182,6 +183,9 @@ class GameTicTacToeMedium : AppCompatActivity() {
     private fun match(button: Button, symbol: String): Boolean = button.text == symbol
 
     private fun result(title: String) {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("blockBaby/TicTacToe/Medium")
+        databaseReference.child("youMediumTicTacToe").setValue(noughtsScore)
+        databaseReference.child("computerMediumTicTacToe").setValue(crossesScore)
         val message = "\nTy $noughtsScore\n\nKomputer $crossesScore"
         AlertDialog.Builder(this)
             .setTitle(title)

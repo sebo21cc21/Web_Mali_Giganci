@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+import com.google.firebase.database.FirebaseDatabase
 
 class ResultActivityMath : AppCompatActivity() {
 
@@ -21,11 +21,20 @@ class ResultActivityMath : AppCompatActivity() {
         // Hide the status bar.
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val userName = intent.getStringExtra(ConstantsMath.USER_NAME)
-        tv_name.text = userName
+        val userNameRef = FirebaseDatabase.getInstance().getReference("blockBaby/name")
+        userNameRef.get().addOnSuccessListener { dataSnapshot ->
+            if (dataSnapshot.exists()) {
+                val userName = dataSnapshot.value.toString()
+                tv_name.text = userName
+            }
+        }
 
         val totalQuestions = intent.getIntExtra(ConstantsMath.TOTAL_QUESTIONS, 0)
         val correctAnswers = intent.getIntExtra(ConstantsMath.CORRECT_ANSWERS, 0)
+
+        val databaseReference = FirebaseDatabase.getInstance().getReference("blockBaby/Quiz/Liczby")
+        databaseReference.child("liczbyCorrectAnswers").setValue(correctAnswers)
+        databaseReference.child("liczbyTotalQuestions").setValue(totalQuestions)
 
         tv_score.text = "Twój wynik to $correctAnswers z $totalQuestions."
 

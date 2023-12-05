@@ -13,15 +13,15 @@ class Quiz : AppCompatActivity() {
         setContentView(R.layout.activity_quiz_main)
     val button = findViewById<View>(R.id.button_play)
     button.setOnClickListener {
-        val intent = Intent(this@Quiz, QuizActivity::class.java)
+        val intent = Intent(this@Quiz, QuizQuestionsActivity::class.java)
         startActivity(intent) }
     val button2 = findViewById<View>(R.id.button_play_math)
     button2.setOnClickListener {
-        val intent = Intent(this@Quiz, QuizActivityMath::class.java)
+        val intent = Intent(this@Quiz, QuizQuestionsActivityMath::class.java)
         startActivity(intent) }
     val button3 = findViewById<View>(R.id.button_play_english)
     button3.setOnClickListener {
-        val intent = Intent(this@Quiz, QuizActivityEnglish::class.java)
+        val intent = Intent(this@Quiz, QuizQuestionsActivityEnglish::class.java)
         startActivity(intent) }
 }
 }

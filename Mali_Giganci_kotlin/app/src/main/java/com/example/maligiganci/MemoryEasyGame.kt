@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import android.widget.TextView
+import com.google.firebase.database.FirebaseDatabase
 
 
 class MemoryEasyGame : AppCompatActivity() {
-
     private var point = 0
+    private var numberOfGame = 0
     private var numOn = 1
     private var currentCardSet = 1
     private lateinit var c1: TextView
@@ -92,6 +93,8 @@ class MemoryEasyGame : AppCompatActivity() {
                 c2.text = ""
                 point++
                 pointsTextView.text = "Punkty: $point"
+                val databaseReference = FirebaseDatabase.getInstance().getReference("blockBaby/Memory/Easy")
+                databaseReference.child("point").setValue(point)
 
                 if (point == 8) {
                         // Wygrana - wszystkie pary zostały odgadnięte
@@ -209,6 +212,9 @@ class MemoryEasyGame : AppCompatActivity() {
     }
     fun resetGame() {
         point = 0
+        numberOfGame += 1
+        val databaseReference = FirebaseDatabase.getInstance().getReference("blockBaby/Memory/Easy")
+        databaseReference.child("numberOfGames").setValue(numberOfGame)
         val pointsTextView = findViewById<TextView>(R.id.points)
         pointsTextView.text = "Punkty: $point"
         val cards = arrayOf(

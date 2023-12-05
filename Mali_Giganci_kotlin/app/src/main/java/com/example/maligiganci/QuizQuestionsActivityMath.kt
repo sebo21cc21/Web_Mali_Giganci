@@ -31,9 +31,6 @@ class QuizQuestionsActivityMath : AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition: Int = 0
     private var mCorrectAnswers: Int = 0
 
-    // START
-    private var mUserName: String? = null
-    // END
 
     /**
      * This function is auto created by Android when the Activity Class is created.
@@ -53,9 +50,6 @@ class QuizQuestionsActivityMath : AppCompatActivity(), View.OnClickListener {
         tv_progress = findViewById(R.id.tv_progress)
         tv_question = findViewById(R.id.tv_question)
         iv_image = findViewById(R.id.iv_image)
-        // START
-        mUserName = intent.getStringExtra(ConstantsMath.USER_NAME)
-        // END
 
         ConstantsMath.getQuestions { questionsList ->
             mQuestionsList = questionsList
@@ -107,7 +101,6 @@ class QuizQuestionsActivityMath : AppCompatActivity(), View.OnClickListener {
                             // START
                             val intent =
                                 Intent(this@QuizQuestionsActivityMath, ResultActivityMath::class.java)
-                            intent.putExtra(ConstantsMath.USER_NAME, mUserName)
                             intent.putExtra(ConstantsMath.CORRECT_ANSWERS, mCorrectAnswers)
                             intent.putExtra(ConstantsMath.TOTAL_QUESTIONS, mQuestionsList!!.size)
                             startActivity(intent)
