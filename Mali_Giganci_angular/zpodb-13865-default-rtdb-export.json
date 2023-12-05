@@ -1,0 +1,356 @@
+{
+  "blockBaby": {
+    "Memory": {
+      "Easy": {
+        "numberOfGames": 7,
+        "point": 1
+      },
+      "Hard": {
+        "numberOfGames": 2,
+        "point": 2
+      }
+    },
+    "Quiz": {
+      "Angielski": {
+        "angielskiCorrectAnswers": 2,
+        "angielskiTotalQuestions": 10
+      },
+      "Flagi": {
+        "flagiCorrectAnswers": 3,
+        "flagiTotalQuestions": 10
+      },
+      "Liczby": {
+        "liczbyCorrectAnswers": 1,
+        "liczbyTotalQuestions": 10
+      }
+    },
+    "TicTacToe": {
+      "Easy": {
+        "computerEasyTicTacToe": 2,
+        "youEasyTicTacToe": 2
+      },
+      "Hard": {
+        "computerHardTicTacToe": 3,
+        "youHardTicTacToe": 0
+      },
+      "Medium": {
+        "computerMediumTicTacToe": 2,
+        "youMediumTicTacToe": 0
+      },
+      "TwoPlayer": {
+        "circleTwoPlayerTicTacToe": 0,
+        "crossTwoPlayerTicTacToe": 1
+      }
+    },
+    "email": "test@op.pl",
+    "flag": true,
+    "image": "https://firebasestorage.googleapis.com/v0/b/zpodb-13865.appspot.com/o/profile%2Ffrog.png?alt=media&token=2f2e495a-f414-4a92-b92c-4869c37ddfe4",
+    "name": "Sebus"
+  },
+  "questions": [
+    {
+      "answerA": "Argentyna",
+      "answerB": "Austria",
+      "answerC": "Armenia",
+      "answerD": "Australia",
+      "correctAnswer": 1,
+      "questionId": 1,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/510px-Flag_of_Argentina.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Angola",
+      "answerB": "Belize",
+      "answerC": "Brunei",
+      "answerD": "Brazylia",
+      "correctAnswer": 4,
+      "questionId": 2,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/640px-Flag_of_Brazil.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Angola",
+      "answerB": "Austria",
+      "answerC": "Australia",
+      "answerD": "Armenia",
+      "correctAnswer": 3,
+      "questionId": 3,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/480px-Flag_of_Australia.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Bahamy",
+      "answerB": "Belgia",
+      "answerC": "Barbados",
+      "answerD": "Belize",
+      "correctAnswer": 2,
+      "questionId": 4,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/369px-Flag_of_Belgium.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Gabon",
+      "answerB": "Francja",
+      "answerC": "Fidżi",
+      "answerD": "Finlandia",
+      "correctAnswer": 3,
+      "questionId": 5,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/510px-Flag_of_Fiji.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Niemcy",
+      "answerB": "Gruzja",
+      "answerC": "Grecja",
+      "answerD": "Żaden z podanych",
+      "correctAnswer": 1,
+      "questionId": 6,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/480px-Flag_of_Germany.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Polska",
+      "answerB": "Egipt",
+      "answerC": "Dania",
+      "answerD": "Etiopia",
+      "correctAnswer": 3,
+      "questionId": 7,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/424px-Flag_of_Denmark.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Irlandia",
+      "answerB": "Iran",
+      "answerC": "Węgry",
+      "answerD": "Indie",
+      "correctAnswer": 4,
+      "questionId": 8,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_India.svg/480px-Flag_of_India.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Australia",
+      "answerB": "Nowa Zelandia",
+      "answerC": "Wielka Brytania",
+      "answerD": "Stany Zjednoczone",
+      "correctAnswer": 2,
+      "questionId": 9,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/480px-Flag_of_New_Zealand.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    },
+    {
+      "answerA": "Kuwejt",
+      "answerB": "Jordania",
+      "answerC": "Sudan",
+      "answerD": "Palestyna",
+      "correctAnswer": 1,
+      "questionId": 10,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/480px-Flag_of_Kuwait.svg.png",
+      "questionText": "Jaki kraj ma taką flagę?"
+    }
+  ],
+  "questionsEnglish": [
+    {
+      "answerA": "Elephant",
+      "answerB": "Giraffe",
+      "answerC": "Lion",
+      "answerD": "Kangaroo",
+      "correctAnswer": 1,
+      "questionId": 1,
+      "questionPhoto": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Elephant.jpg",
+      "questionText": "What is the largest land animal on Earth?"
+    },
+    {
+      "answerA": "Blue",
+      "answerB": "Green",
+      "answerC": "Yellow",
+      "answerD": "Purple",
+      "correctAnswer": 2,
+      "questionId": 2,
+      "questionPhoto": "https://printexpress.pl/wp-content/uploads/2020/11/photo-1581079289103-0544b7dfad66-800x534.jpg",
+      "questionText": "Which color is a mixture of blue and yellow?"
+    },
+    {
+      "answerA": "Apple",
+      "answerB": "Banana",
+      "answerC": "Carrot",
+      "answerD": "Pizza",
+      "correctAnswer": 3,
+      "questionId": 3,
+      "questionPhoto": "https://olimpstore.pl/media/mageplaza/blog/post/w/a/warzywa-owoce.jpg",
+      "questionText": "Which is a vegetable that is orange and often used in salads?"
+    },
+    {
+      "answerA": "Bus",
+      "answerB": "Bicycle",
+      "answerC": "Rocket",
+      "answerD": "Boat",
+      "correctAnswer": 4,
+      "questionId": 4,
+      "questionPhoto": "https://mechanicbase.com/wp-content/uploads/2022/01/types-of-cars.jpg",
+      "questionText": "What floats on water and can take you for a ride?"
+    },
+    {
+      "answerA": "Monday",
+      "answerB": "December",
+      "answerC": "Giraffe",
+      "answerD": "Pancakes",
+      "correctAnswer": 1,
+      "questionId": 5,
+      "questionPhoto": "https://i.ytimg.com/vi/7WGepTIRKHA/maxresdefault.jpg",
+      "questionText": "Which day of the week comes after Sunday?"
+    },
+    {
+      "answerA": "Bear",
+      "answerB": "Butterfly",
+      "answerC": "Bee",
+      "answerD": "Bat",
+      "correctAnswer": 2,
+      "questionId": 6,
+      "questionPhoto": "https://img.pixers.pics/pho_wat(s3:700/FO/30/06/01/35/700_FO30060135_2b622f9083169b0d87e9ef976ca7f1f9.jpg,700,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,650,jpg)/plakaty-owady-lub-robaki-kolekcja-wektor.jpg.jpg",
+      "questionText": "Which insect has colorful wings and can fly?"
+    },
+    {
+      "answerA": "Family",
+      "answerB": "Home",
+      "answerC": "School",
+      "answerD": "I don't know",
+      "correctAnswer": 4,
+      "questionId": 7,
+      "questionPhoto": "https://www.buyrentkenya.com/discover/wp-content/uploads/2022/06/brk-blog-4reasons-why.png",
+      "questionText": "Where do you live?"
+    },
+    {
+      "answerA": "Red",
+      "answerB": "Pink",
+      "answerC": "Blue",
+      "answerD": "Yellow",
+      "correctAnswer": 3,
+      "questionId": 8,
+      "questionPhoto": "https://printexpress.pl/wp-content/uploads/2020/11/photo-1581079289103-0544b7dfad66-800x534.jpg",
+      "questionText": "The sky is often this color during the day. What color is it?"
+    },
+    {
+      "answerA": "Car",
+      "answerB": "Helicopter",
+      "answerC": "Bicycle",
+      "answerD": "Train",
+      "correctAnswer": 1,
+      "questionId": 9,
+      "questionPhoto": "https://mechanicbase.com/wp-content/uploads/2022/01/types-of-cars.jpg",
+      "questionText": "What do you drive on the road with four wheels?"
+    },
+    {
+      "answerA": "Wednesday",
+      "answerB": "June",
+      "answerC": "Lion",
+      "answerD": "Pizza",
+      "correctAnswer": 4,
+      "questionId": 10,
+      "questionPhoto": "https://olimpstore.pl/media/mageplaza/blog/post/w/a/warzywa-owoce.jpg",
+      "questionText": "Which is a popular food with cheese, tomato sauce, and various toppings?"
+    }
+  ],
+  "questionsMath": [
+    {
+      "answerA": "4",
+      "answerB": "3",
+      "answerC": "2",
+      "answerD": "5",
+      "correctAnswer": 1,
+      "questionId": 1,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 2 + 2?"
+    },
+    {
+      "answerA": "22",
+      "answerB": "44",
+      "answerC": "33",
+      "answerD": "11",
+      "correctAnswer": 3,
+      "questionId": 2,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 45 - 11?"
+    },
+    {
+      "answerA": "5",
+      "answerB": "6",
+      "answerC": "8",
+      "answerD": "1",
+      "correctAnswer": 2,
+      "questionId": 3,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 3 ^ 2?"
+    },
+    {
+      "answerA": "100",
+      "answerB": "50",
+      "answerC": "1000",
+      "answerD": "1",
+      "correctAnswer": 3,
+      "questionId": 4,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 10 * 10 * 10?"
+    },
+    {
+      "answerA": "77",
+      "answerB": "412",
+      "answerC": "152",
+      "answerD": "113",
+      "correctAnswer": 4,
+      "questionId": 5,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 10 + 10 * 10 + 3?"
+    },
+    {
+      "answerA": "44",
+      "answerB": "53",
+      "answerC": "64",
+      "answerD": "78",
+      "correctAnswer": 2,
+      "questionId": 6,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 20 + 10 + 10 + 5 + 3 + 3 + 2 ?"
+    },
+    {
+      "answerA": "44",
+      "answerB": "-1",
+      "answerC": "0",
+      "answerD": "nie dzielimy przez 0",
+      "correctAnswer": 4,
+      "questionId": 7,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 1/0 ?"
+    },
+    {
+      "answerA": "132",
+      "answerB": "5",
+      "answerC": "0",
+      "answerD": "nie da się policzyć",
+      "correctAnswer": 2,
+      "questionId": 8,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Adam miał 5 jabłek, dał Ani 3 jabłka, 2 zgubił. Ile zjadł jabłek Adam ?"
+    },
+    {
+      "answerA": "412",
+      "answerB": "555",
+      "answerC": "717",
+      "answerD": "nie wiem",
+      "correctAnswer": 3,
+      "questionId": 9,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Ile to 717 / (1 + 3 * 3 -6)?"
+    },
+    {
+      "answerA": "Janek",
+      "answerB": "Antek",
+      "answerC": "Łucja",
+      "answerD": "Kajtek",
+      "correctAnswer": 1,
+      "questionId": 10,
+      "questionPhoto": "https://naklej-to.pl/images/szkolne/matematyka1.jpg",
+      "questionText": "Kto jest starszy: Janek 18 lat, Antek 12 lat, Łucja 13 lat czy Kajtek 17 lat?"
+    }
+  ]
+}
