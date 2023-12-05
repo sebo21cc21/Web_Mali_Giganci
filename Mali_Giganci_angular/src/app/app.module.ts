@@ -22,6 +22,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { GamesSummaryComponent } from './pages/games-summary/games-summary.component';
+import { MatTableModule } from '@angular/material/table';
 const NO_NG_MODULES = importProvidersFrom([BrowserAnimationsModule]);
 @NgModule({
   declarations: [
@@ -45,8 +46,7 @@ const NO_NG_MODULES = importProvidersFrom([BrowserAnimationsModule]);
     MatButtonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-
-
+    MatTableModule
   ],
   providers: [
     AngularFireDatabaseModule,

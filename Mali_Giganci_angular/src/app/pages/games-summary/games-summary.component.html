@@ -3,5 +3,97 @@
     <span class="spacer"></span>
     <button mat-button (click)="profil()">Profil</button>
     <button mat-button (click)="logOut()">Wyloguj się</button>
-</mat-toolbar>
-<p>games-summary works!</p>
+  </mat-toolbar>
+
+<div class="game-table">
+  <h2>Memory Game</h2>
+  <mat-table [dataSource]="dataSourceMemory" class="mat-elevation-z8">
+  
+    <!-- Kolumny -->
+    <ng-container matColumnDef="game">
+      <mat-header-cell *matHeaderCellDef> Gra </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.game}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="difficulty">
+      <mat-header-cell *matHeaderCellDef> Trudność </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.difficulty}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="numberOfGames">
+      <mat-header-cell *matHeaderCellDef> Liczba gier </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.numberOfGames}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="points">
+      <mat-header-cell *matHeaderCellDef> Punkty </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.points}} </mat-cell>
+    </ng-container>
+
+    <!-- Nagłówek i wiersze tabeli -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+
+<div class="game-table">
+  <h2>Tic Tac Toe</h2>
+  <mat-table [dataSource]="dataSourceTicTacToe" class="mat-elevation-z8">
+  
+    <!-- Kolumny -->
+    <ng-container matColumnDef="game">
+      <mat-header-cell *matHeaderCellDef> Gra </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.game}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="difficulty">
+      <mat-header-cell *matHeaderCellDef> Trudność</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.difficulty}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="numberOfGames">
+      <mat-header-cell *matHeaderCellDef> Dziecko </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.numberOfGames}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="points">
+      <mat-header-cell *matHeaderCellDef> Komputer/Oponent </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.points}} </mat-cell>
+    </ng-container>
+
+    <!-- Nagłówek i wiersze tabeli -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
+
+<div class="game-table">
+  <h2>Quiz</h2>
+  <mat-table [dataSource]="dataSourceQuiz" class="mat-elevation-z8">
+  
+    <!-- Kolumny -->
+    <ng-container matColumnDef="game">
+      <mat-header-cell *matHeaderCellDef> Gra </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.game}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="difficulty">
+      <mat-header-cell *matHeaderCellDef> Trudność </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.difficulty}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="numberOfGames">
+      <mat-header-cell *matHeaderCellDef> Liczba możliwych odpowiedzi </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.numberOfGames}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="points">
+      <mat-header-cell *matHeaderCellDef> Zdobyte punkty </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.points}} </mat-cell>
+    </ng-container>
+
+    <!-- Nagłówek i wiersze tabeli -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
