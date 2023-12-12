@@ -1,11 +1,18 @@
 {
-  "hosting": [
-    {
-      "target": "auth-yt",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ],
+  "hosting": {
+    "public": "dist\\mali-giganci",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
   "database": {
     "rules": "database.rules.json"
   },

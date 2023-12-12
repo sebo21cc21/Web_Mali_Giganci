@@ -54,11 +54,11 @@
             android:id="@+id/registerNow"
             android:text="Nie masz jeszcze konta? Zarejestruj się"
             android:textSize="20sp"
-            android:textStyle="bold"
             android:gravity="center"
+            android:textColor="@color/white"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     <Button
             android:id="@+id/btn_login_google"

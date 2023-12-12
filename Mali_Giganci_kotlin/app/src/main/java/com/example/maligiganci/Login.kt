@@ -47,8 +47,10 @@ class Login : AppCompatActivity() {
 
     private fun signInGoogle(){
         val signInIntent = googleSignInClient.signInIntent
+        // Uruchom interfejs wyboru konta Google
         launcher.launch(signInIntent)
     }
+
 
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
             result ->

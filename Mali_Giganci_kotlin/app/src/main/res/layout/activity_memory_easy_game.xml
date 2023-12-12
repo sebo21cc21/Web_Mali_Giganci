@@ -15,7 +15,7 @@
         android:alpha="0.5"
         android:background="@drawable/btn_draw"
         android:gravity="center"
-        android:text="Change view"
+        android:text="Zmień planszę"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

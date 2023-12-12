@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_view_kontakty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        layout_height="20dp"
+        layout_width="20dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/gradient_background"/>

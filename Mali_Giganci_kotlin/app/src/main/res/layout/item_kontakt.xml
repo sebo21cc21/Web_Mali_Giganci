@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/purple_500">
+
+    <TextView
+        android:id="@+id/email_kontaktu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"/>
+
+    <!-- New TextView for Child's Name -->
+    <TextView
+        android:id="@+id/child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp"/>
+
+    <!-- New ImageView for Child's Image -->
+    <ImageView
+        android:id="@+id/child_image"
+        android:layout_width="400dp"
+        android:layout_height="700dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

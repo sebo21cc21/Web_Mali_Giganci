@@ -22,18 +22,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = findViewById<TextView>(R.id.user_details)
-        auth = FirebaseAuth.getInstance()
-        user = auth.currentUser
-        if (user == null){
-            val intent = Intent(this, Login::class.java)
-            startActivity(intent)
-            finish()
-        }
-        else{
-            textView.text = user?.email
-            saveEmailToFirebase(user?.email)
-        }
+//        val textView = findViewById<TextView>(R.id.user_details)
+//        auth = FirebaseAuth.getInstance()
+//        user = auth.currentUser
+//        if (user == null){
+//            val intent = Intent(this, Login::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+//        else{
+//            textView.text = user?.email
+//            saveEmailToFirebase(user?.email)
+//        }
 
         val flagRef = FirebaseDatabase.getInstance().getReference("blockBaby/flag")
 
@@ -74,6 +74,11 @@ class MainActivity : AppCompatActivity() {
         val button3 = findViewById<View>(R.id.imageButton3)
         button3.setOnClickListener {
             val intent = Intent(this@MainActivity, Quiz::class.java)
+            startActivity(intent)
+        }
+        val button5 = findViewById<View>(R.id.button_contact)
+        button5.setOnClickListener {
+            val intent = Intent(this@MainActivity, Contact::class.java)
             startActivity(intent)
         }
 
